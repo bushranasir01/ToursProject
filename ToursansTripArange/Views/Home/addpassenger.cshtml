@@ -1,0 +1,74 @@
+﻿@model ToursansTripArange.Models.Passenger
+@{
+    ViewBag.Title = "addpassenger";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+<div class="banner">
+    <div class="agileinfo-dot">
+        <div class="w3-agileits-about-banner">
+            <div class="container">
+                <h2>Add Passenger</h2>
+            </div>
+        </div>
+    </div>
+</div>
+@using (Ajax.BeginForm("addpassengerconfirm", new AjaxOptions()
+{
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "dane"
+}))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true) 
+
+    <fieldset>
+        <a href="~/Views/Home/signup.cshtml">~/Views/Home/signup.cshtml</a>
+        <legend>ADD PASSENGERS TO TRIPS</legend>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.name)
+            @Html.ValidationMessageFor(model => model.name)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.cnic)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.cnic)
+            @Html.ValidationMessageFor(model => model.cnic)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.address)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.address)
+            @Html.ValidationMessageFor(model => model.address)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.phonenumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.phonenumber)
+            @Html.ValidationMessageFor(model => model.phonenumber)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.email)
+            @Html.ValidationMessageFor(model => model.email)
+        </div>
+
+        <p>
+            <input type="submit" value="add passenger" />
+        </p>
+    </fieldset>
+}
+
+<div id="dane">
+  
+</div>

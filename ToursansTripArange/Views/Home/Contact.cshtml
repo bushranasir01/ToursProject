@@ -1,0 +1,80 @@
+﻿@model ToursansTripArange.Models.Contact
+@{
+    ViewBag.Title = "contact";
+}
+<body>
+    <!-- banner -->
+    <div class="banner">
+        <div class="agileinfo-dot">
+
+            <div class="w3-agileits-about-banner">
+                <div class="container">
+                    <h2>Contact</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //banner -->
+    <!-- contact -->
+    <div class="contact">
+        <div class="container">
+            <div class="agile-contact-form">
+                <div class="col-md-6 contact-form-left">
+                    <div class="w3layouts-contact-form-top">
+                        <h3>Get in touch</h3>
+                        <p> Contact Us At Any Time And At Any Where Through this Website. Quick response you get and subscribe our website.Move all over the world to register yourself. For more information or help contact us.Give Your feedback which is more imporatnt for us .Thanks</p>
+                    </div>
+                    <div class="agileits-contact-address">
+                        <ul>
+                            <li><i class="fa fa-phone" aria-hidden="true"></i> <span>+1 234 567 8901</span></li>
+                            <li><i class="fa fa-phone fa-envelope" aria-hidden="true"></i> <span><a href="mailto:example@email.com">mail@example.com</a></span></li>
+                            <li><i class="fa fa-map-marker" aria-hidden="true"></i> <span>Eiusmod Tempor inclore Place,Kingsport 56777.</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 contact-form-right">
+                    <div class="contact-form-top">
+                        <h3>Send us a message</h3>
+                    </div>
+                    <div class="agileinfo-contact-form-grid">
+                      @using (Html.BeginForm("addcontact", "Home", FormMethod.Post))
+                      {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+
+                        @Html.Label("Name")
+                        @Html.EditorFor(model => model.Name)
+                        @Html.ValidationMessageFor(model => model.Name)
+                        <br />    <br />
+                        @Html.Label("Email")
+                        @Html.EditorFor(model => model.Email)
+                        @Html.ValidationMessageFor(model => model.Email)
+                        <br />    <br />
+                        @Html.Label("Telephone")
+                        @Html.EditorFor(model => model.Telephone)
+                        @Html.ValidationMessageFor(model => model.Telephone)
+                        <br />    <br />
+                        @Html.Label("Message")
+                        @Html.EditorFor(model => model.Message)
+                        @Html.ValidationMessageFor(model => model.Message)
+                        <br />    <br />
+
+                        @* Name <input type="text" name="Name" />*@
+                        <input type="submit" value="Submit" id="btnsubmit" />
+                      }
+
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+
+            <div class="w3agile-map">
+                <h3>Find us here</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102623.04862310845!2d-82.59779327009554!3d36.506579763153326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885a856b70074b97%3A0x6f9cc0d30bcc841f!2sKingsport%2C+TN%2C+USA!5e0!3m2!1sen!2sin!4v1471495038514" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- //contact -->
+    <!-- footer -->
+
+</body>

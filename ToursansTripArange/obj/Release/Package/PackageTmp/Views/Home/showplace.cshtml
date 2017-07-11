@@ -1,0 +1,43 @@
+﻿@model List<ToursansTripArange.Models.Place>
+@{
+    ViewBag.Title = "showplace";
+
+}
+<div class="banner">
+    <div class="agileinfo-dot">
+        <div class="w3-agileits-about-banner">
+            <div class="container">
+                <h2>Show Place</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>List of places</h2>
+<table style="width:100%">
+    <tr>
+
+        <td>placename</td>
+        <td>placelocation  </td>
+        <td>placedescripion </td>
+        <td>placeimage </td>
+
+    </tr>
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.placename</td>
+
+            <td>@s.placelocation</td>
+            <td>@s.placedescription</td>
+            <td>@s.placeimage</td>
+
+            <td>
+                <a href="/Home/updateplace/@s.Id">Update</a>
+                <a href="/Home/deleteplace/@s.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+<a href="/Home/addplace">Insert</a>
+<br />    <br />

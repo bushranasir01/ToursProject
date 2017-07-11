@@ -1,0 +1,47 @@
+﻿@model List<ToursansTripArange.Models.News>
+@{
+    ViewBag.Title = "News";
+}
+
+<div class="banner">
+    <div class="agileinfo-dot">
+        <div class="w3-agileits-about-banner">
+            <div class="container">
+                <h2>NEWS</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<h2>News</h2>
+<div class="gallery">
+    <div class="container">
+        <div class="gallery-grids">
+            <div class="w3ls-gallery-grids">
+
+                @foreach (var s in Model)
+                {
+
+                    <div class="col-md-3 gallery-grids-left-subr">
+                        <div class="gallery-grid">
+                            <a class="example-image-link" href="~/images/@s.image" data-lightbox="example-set" data-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae cursus ligula">
+                                <img src="~/images/@s.image" alt="" />
+                                <h1>@s.Name</h1>
+                                <p>@s.Description</p>
+                            </a>
+                        </div>
+                    </div>
+                }
+
+
+
+
+
+                <div class="clearfix"> </div>
+            </div>
+            <script src="js/lightbox-plus-jquery.min.js"> </script>
+        </div>
+    </div>
+</div>
+

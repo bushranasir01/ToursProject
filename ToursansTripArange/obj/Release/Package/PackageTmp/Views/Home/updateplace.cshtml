@@ -1,0 +1,30 @@
+﻿@model ToursansTripArange.Models.Place
+@{
+    ViewBag.Title = "updateplace";
+}
+<div class="banner">
+    <div class="agileinfo-dot">
+        <div class="w3-agileits-about-banner">
+            <div class="container">
+                <h2>Update Place</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>updateplace</h2>
+
+<form action="/Home/updateplaceconfirm//@Model.Id" method="post">
+    Placename <input type="text" value="@Model.placename" name="t1" />
+    <br />    <br />
+    PlaceLocation <input type="text" value="@Model.placelocation" name="t2" />
+    <br />    <br />
+    placedescription <input type="text" value="@Model.placedescription" name="t3" />
+    <br />    <br />
+    placeimage <input type="text" value="@Model.placeimage" name="t4" />
+    <br />    <br />
+    <input type="submit" value="Update Place" />
+
+
+</form>
+

@@ -1,0 +1,31 @@
+﻿@model ToursansTripArange.Models.signup
+@{
+    ViewBag.Title = "signup";
+}
+
+<h2>signup</h2>
+
+
+
+    @using (Html.BeginForm("signupconfirm", "Home", FormMethod.Post))
+{
+    <br />    <br />
+
+    @Html.LabelFor(m => m.username)
+    <br />
+    @Html.TextBoxFor(m => m.username)
+    <br />    <br />
+    @Html.LabelFor(m => m.email)
+    <br />
+    @Html.TextBoxFor(m => m.email)
+    <br />    <br />
+    @Html.LabelFor(m => m.password)
+    <br />
+    @Html.TextBoxFor(m => m.password)
+
+    <br />    <br />
+    <br />    <br />
+    <button type="submit">Register</button>
+
+    }
+

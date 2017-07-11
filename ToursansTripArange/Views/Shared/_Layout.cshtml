@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Perfect Travel a Travel Category Bootstrap responsive Website Template | Home :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Perfect Travel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- bootstrap-css -->
+    
+    <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+   
+    <!--// bootstrap-css -->
+    <!-- css -->
+    <link rel="stylesheet" href="~/Content/style.css" type="text/css" media="all" />
+    <!--// css -->
+    <link rel="stylesheet" href="~/Content/flexslider.css" type="text/css" media="screen" property="" />
+    <!-- font-awesome icons -->
+    <link href="~/Content/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <link rel="stylesheet" href="~/Content/owl.carousel.css" type="text/css" media="all">
+    <link href="~/Content/owl.theme.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="~/Content/cm-overlay.css" />
+    <!-- font -->
+    <link href="//fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <!-- //font -->
+    <script src="~/Scripts/jquery-1.11.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+    </script>
+    <script>
+$(document).ready(function() {
+	$("#owl-demo").owlCarousel({
+
+		autoPlay: 3000, //Set AutoPlay to 3 seconds
+		autoPlay:true,
+		items : 3,
+		itemsDesktop : [640,5],
+		itemsDesktopSmall : [414,4]
+
+	});
+
+});
+    </script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <div class="head">
+        <div class="container">
+            <div class="navbar-top">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-brand logo ">
+                        <h1 class="animated wow pulse" data-wow-delay=".5s">
+                            <a href="index.html">Perfect <span>Travel</span></a>
+                        </h1>
+                    </div>
+                    @Html.Partial("_LoginPartial")
+                </div>
+       @{string ctrName = ViewContext.RouteData.Values["action"].ToString();}
+       
+              
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    
+                    <ul class="nav navbar-nav link-effect-4">
+                        
+                        <li @if (ctrName == "Index") { <text> class="active" </text>  }>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li @if(ctrName == "About"){ <text> class="active" </text> }>@Html.ActionLink("About Us",  "About", "Home")</li>
+                        <li @if (ctrName == "gallery") { <text> class="active" </text>  }>@Html.ActionLink("gallery", "gallery", "Home")</li>
+                        
+                        <li @if (ctrName == "Contact") { <text> class="active" </text>  }>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li @if (ctrName == "Addbooking") { <text> class="active" </text>   }>@Html.ActionLink("OnlineBooking", "Addbooking", "Home")</li>
+                        <li @if (ctrName == "News") { <text> class="active" </text>   }>@Html.ActionLink("News", "News", "Home")</li>
+
+                        
+
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+
+            </div>
+
+            <div class="header-left animated wow fadeInLeft animated" data-wow-delay=".5s">
+                <ul>
+                    <li><i class="glyphicon glyphicon-envelope"></i><a href="mailto:info@example.com">@@example.com</a></li>
+                    <li><i class="glyphicon glyphicon-earphone"></i>+1234 567 892</li>
+
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    @RenderBody()
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="agile-footer-grids">
+                <div class="col-md-4 agile-footer-grid">
+                    <h4>History of Agriculture</h4>
+                    <p>Pellentesque urna ex, ultricies a nunc at, pretium maximus nisi. Vestibulum non auctor diam. Mauris eget consectetur mauris. <span>Aenean leo elit, accumsan vel elit vitae, mattis ultricies lacus. Cras consectetur justo lorem, sed dictum sapien eleifend at.</span></p>
+                </div>
+                <div class="col-md-4 agile-footer-grid">
+                    <h4>Twitter Posts</h4>
+                    <ul class="w3agile_footer_grid_list">
+                        <li>
+                            Ut aut reiciendis voluptatibus maiores <a href="#">http://example.com</a> alias, ut aut reiciendis.
+                            <span><i class="fa fa-twitter" aria-hidden="true"></i> 02 days ago</span>
+                        </li>
+                        <li>
+                            Itaque earum rerum hic tenetur a sapiente delectus <a href="#">http://mail.com</a> ut aut
+                            voluptatibus.<span><i class="fa fa-twitter" aria-hidden="true"></i> 03 days ago</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 agile-footer-grid">
+                    <h4>Popular Items</h4>
+                    <div class="popular-grids">
+                        <div class="popular-grid">
+                            <a href="#"><img src="~/images/5.jpg" alt=""></a>
+                        </div>
+                        <div class="popular-grid">
+                            <a href="#"><img src="~/images/6.jpg" alt=""></a>
+                        </div>
+                        <div class="popular-grid">
+                            <a href="#"><img src="~/images/7.jpg" alt=""></a>
+                        </div>
+                        <div class="popular-grid">
+                            <a href="#"><img src="~/images/8.jpg" alt=""></a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="popular-grids">
+                        <div class="popular-grid">
+                            <a href="#"><img src="~/images/9.jpg" alt=""></a>
+                        </div>
+                        <div class="popular-grid">
+                            <a href="#"><img src="~/images/10.jpg" alt=""></a>
+                        </div>
+                        <div class="popular-grid">
+                            <a href="#"><img src="~/images/2.jpg" alt=""></a>
+                        </div>
+                        <div class="popular-grid">
+                            <a href="#"><img src="~/images/3.jpg" alt=""></a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2017 Perfect Travel. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+        </div>
+    </div>
+    <!-- //footer -->
+    <script src="~Scripts/jarallax.js"></script>
+    <script src="~Scripts/SmoothScroll.min.js"></script>
+    <script type="text/javascript">
+        /* init Jarallax */
+        $('.jarallax').jarallax({
+            speed: 0.5,
+            imgWidth: 1366,
+            imgHeight: 768
+        })
+    </script>
+    <script type="text/javascript" src="~Scripts/move-top.js"></script>
+    <script type="text/javascript" src="~Scripts/easing.js"></script>
+    <!-- here stars scrolling icon -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+    <!-- //here ends scrolling icon -->
+    <script src="~Scripts/owl.carousel.js"></script>
+
+</body>
+</html>

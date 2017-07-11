@@ -1,0 +1,43 @@
+﻿@model List<ToursansTripArange.Models.Passenger>
+@{
+    ViewBag.Title = "showpassenger";
+
+}
+<div class="banner">
+    <div class="agileinfo-dot">
+        <div class="w3-agileits-about-banner">
+            <div class="container">
+                <h2>Show Passenger</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>List of passenger</h2>
+<table style="width:100%">
+    <tr>
+
+        <td>name</td>
+        <td>cnic  </td>
+        <td>address </td>
+        <td>phonenumber  </td>
+        <td>email   </td>
+    </tr>
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.name</td>
+
+            <td>@s.cnic</td>
+            <td>@s.address</td>
+            <td>@s.phonenumber</td>
+            <td>@s.email</td>
+            <td>
+                <a href="/Home/updatepassenger/@s.Id">Update</a>
+                <a href="/Home/deletepassenger/@s.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+<a href="/Home/addpassenger">Insert</a>
+<br />    <br />

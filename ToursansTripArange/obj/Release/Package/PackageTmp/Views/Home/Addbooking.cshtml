@@ -1,0 +1,69 @@
+﻿@model ToursansTripArange.Models.booking
+@{
+    ViewBag.Title = "Addbooking";
+}
+
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+
+<div class="banner">
+    <div class="agileinfo-dot">
+        <div class="w3-agileits-about-banner">
+            <div class="container">
+                <h2>Online Trip Booking</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Addbooking</h2>
+@using (Html.BeginForm("Addbookingconfirm", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    @Html.Label(" Name")
+    @Html.EditorFor(model => model.Name)
+    @Html.ValidationMessageFor(model => model.Name)
+    <br />    <br />
+    @Html.Label("Phone Number")
+    @Html.EditorFor(model => model.Phonenumber)
+    @Html.ValidationMessageFor(model => model.Phonenumber)
+    <br />    <br />
+    @Html.Label("Email")
+    @Html.EditorFor(model => model.Email)
+    @Html.ValidationMessageFor(model => model.Email)
+    <br />    <br />
+    @Html.Label("Address")
+    @Html.EditorFor(model => model.Address)
+    @Html.ValidationMessageFor(model => model.Address)
+    <br />    <br />
+    @Html.Label("Cinc")
+    @Html.EditorFor(model => model.Cinc)
+    @Html.ValidationMessageFor(model => model.Cinc)
+    <br />    <br />
+
+    @Html.Label("Noofpeoples")
+    @Html.EditorFor(model => model.Noofpeoples)
+    @Html.ValidationMessageFor(model => model.Noofpeoples)
+    <br />    <br />
+
+    @Html.Label("place")
+    @Html.EditorFor(model => model.place)
+    @Html.ValidationMessageFor(model => model.place)
+    <br />    <br />
+    @Html.Label("Daysfortrip")
+    @Html.EditorFor(model => model.Daysfortrip)
+    @Html.ValidationMessageFor(model => model.Daysfortrip)
+    <br />    <br />
+    @Html.Label("Hoteltostay")
+    @Html.EditorFor(model => model.Hoteltostay)
+    @Html.ValidationMessageFor(model => model.Hoteltostay)
+    <br />    <br />
+
+
+    @* Name <input type="text" name="Name" />*@
+    <input type="submit" value="Booking" id="subbtn" onclick="check" />
+}

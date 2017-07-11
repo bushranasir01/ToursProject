@@ -1,0 +1,45 @@
+﻿@model List<ToursansTripArange.Models.Contact>
+@{
+    ViewBag.Title = "Contacts";
+}
+
+<div class="banner">
+    <div class="agileinfo-dot">
+        <div class="w3-agileits-about-banner">
+            <div class="container">
+                <h2>Messages</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<h2> Customer Messages</h2>
+<table style="width:100%">
+    <tr>
+
+        <td>Name</td>
+        <td>Email  </td>
+        <td>Telephone </td>
+        <td>Message  </td>
+        
+    </tr>
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>@s.Name</td>
+
+                <td>@s.Email</td>
+                <td>@s.Telephone</td>
+                <td>@s.Message</td>
+            <td>
+                <a href="/Home/deletecontact/@s.Id">Delete</a>
+            </td>
+
+        
+        </tr>
+    
+
+    }
+</table>
+
